@@ -1,20 +1,17 @@
 import 'package:equatable/equatable.dart';
 
-class quoteClass extends Equatable {
-  final String quote;
+class Quote extends Equatable {
   final String author;
-  final String category;
+  final int id;
+  final String content;
+  final String permalink;
 
-  quoteClass({required this.author, required this.quote, required this.category});
+  const Quote(
+      {required this.author,
+      required this.id,
+      required this.content,
+      required this.permalink});
 
   @override
-  List<Object?> get props => [quote, author, category];
+  List<Object?> get props => [author, id, content, permalink];
 }
-
-/*
-*   {
-    "quote": "The will of man is his happiness.",
-    "author": "Friedrich Schiller",
-    "category": "happiness"
-
-* */
